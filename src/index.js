@@ -4,10 +4,18 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
+//폰트 적용하기
+import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
+const theme = createMuiTheme({
+  typography: {
+    fontFamily: 'main',
+  },
+});
+
 ReactDOM.render(
-  <React.StrictMode>
+  <MuiThemeProvider theme={theme}>
     <App />
-  </React.StrictMode>,
+  </MuiThemeProvider>,
   document.getElementById('root')
 );
 
